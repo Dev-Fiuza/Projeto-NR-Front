@@ -26,7 +26,7 @@ function Empresas() {
   function criarNovaEmpresa() {
     api
       .post(`/startup`, {
-        nomeEmpresa: "Empresa 1",
+        nomeEmpresa: "Empresa Teste",
         tipoEmpresa: "Tech",
         cnpj: "01.736.759/0001-08",
         indicadorIncubacao: true,
@@ -42,9 +42,11 @@ function Empresas() {
   }
 
   function atualizarEmpresa(codigo) {
-    api.patch(`/startup/${codigo}`).then(
+    api.patch(`/startup/${codigo}`,{
+      nomeEmpresa:'Atualização Empresa Nome',
+    }).then(
       (response) => {
-        console.log(response);
+        pegarDadosEmpresa();
       },
       (error) => {
         console.log(error);
