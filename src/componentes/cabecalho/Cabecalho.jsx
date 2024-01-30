@@ -6,6 +6,7 @@ function Cabecalho() {
     <BarraNavegacao>
       <MenuLink caminho="/">Menu Inicial</MenuLink>
       <MenuLink caminho="/empresas">Empresas</MenuLink>
+      <b>Teste atualização</b>
     </BarraNavegacao>
   );
 }
